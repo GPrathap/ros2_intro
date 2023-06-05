@@ -2,7 +2,7 @@
 ## Course Structure :space_invader:
     
 - Section 1 :alien:	
-    - ROS2 Fundamentals [:books:](lectures/) [:scroll: code]()
+    - ROS2 Fundamentals [:books:](lectures/ros2_fundamentals.pdf) [:scroll: code]()
     - Workout Examples  [:books:](lectures/) [:scroll: code]()
 - Section 2 :alien:	
     - ROS2 Visualization  [:books:](lectures/) [:scroll: code]()
