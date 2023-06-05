@@ -1,0 +1,8 @@
+version: "2.2"
+services:
+  diff_mpc:
+    container_name: ros2_container 
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: ros2_container:v1

@@ -1,0 +1,6 @@
+set_user_info_node:
+  ros__parameters:
+    user_name: r2d2
+    user_id: 345
+    friends_names: [r2d12, r2d22]
+    friends_ids: [234, 567]
