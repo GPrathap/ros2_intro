@@ -6,9 +6,9 @@
     - Workout Examples  [:books:](lectures/) [:scroll: code]()
 - Section 2 :alien:	
     - ROS2 Visualization  [:books:](lectures/) [:scroll: code]()
-    - ROS Debugging [:books:]() [:scroll: code]()	
-    - ROS Basic Control :books:	
-    - ROS Simulation (Gazebo+SDF) [:books:](lectures/) [:scroll: code]()	
+    - ROS2 Debugging [:books:]() [:scroll: code]()	
+    - ROS2 Basic Control :books:	
+    - ROS2 Simulation (Gazebo+SDF) [:books:](lectures/) [:scroll: code]()	
 - Section 3 :alien:	
     - Mini Group Project 
 - References
