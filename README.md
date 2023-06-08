@@ -12,7 +12,7 @@
 - Section 3 :alien:	
     - Mini Group Project 
 - References
-    - https://docs.ros.org/en/foxy/index.html
+    - https://docs.ros.org/en/humble/index.html
 
 ## Instruction for running the docker container  
 
