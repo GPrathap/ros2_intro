@@ -14,6 +14,8 @@ class SenderNode : public rclcpp::Node{
     void timer_callback(){
       message_.id = 345;
       message_.name = "d2r2";
+      std::vector<int32_t> items = {4, 5, 67, 34};
+      message_.food_items = {4 , 5 , 67, 34};
       publisher_->publish(message_);
     }
   
@@ -28,8 +30,8 @@ int main(int argc, char** argv){
 
   auto node = std::make_shared<SenderNode>();
   
-  rclcpp::spin(node);
 
+  rclcpp::spin(node);
   rclcpp::shutdown();
   return 0;
 }

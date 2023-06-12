@@ -10,7 +10,7 @@ find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/FriendInfo.msg"
   # "msg/R2D2.msg"
-  # "srv/FriendInfoService.srv"
+  "srv/FriendInfoService.srv"
   # "srv/SetSpeed.srv"
   DEPENDENCIES builtin_interfaces
 )

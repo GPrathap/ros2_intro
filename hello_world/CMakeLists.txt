@@ -15,8 +15,8 @@ set(dependencies
 add_executable(publisher_node src/friend_hello_pub_todo.cpp)
 ament_target_dependencies(publisher_node ${dependencies})
 
-# add_executable(publisher_class_node src/friend_hello_pub_class_todo.cpp)
-# ament_target_dependencies(publisher_class_node ${dependencies})
+add_executable(publisher_class_node src/friend_hello_pub_class_todo.cpp)
+ament_target_dependencies(publisher_class_node ${dependencies})
 
 add_executable(subscriber_node src/friend_hello_sub_todo.cpp)
 ament_target_dependencies(subscriber_node ${dependencies})
@@ -27,19 +27,19 @@ ament_target_dependencies(subscriber_node ${dependencies})
 # add_executable(param_reader_user_info src/set_name_and_id_todo.cpp)
 # ament_target_dependencies(param_reader_user_info ${dependencies})
 
-# add_executable(service_client src/friend_service_client_todo.cpp)
-# ament_target_dependencies(service_client ${dependencies})
+add_executable(service_client src/friend_service_client.cpp)
+ament_target_dependencies(service_client ${dependencies})
 
-# add_executable(service_server src/friend_service_server_todo.cpp)
-# ament_target_dependencies(service_server ${dependencies})
+add_executable(service_server src/friend_service_server.cpp)
+ament_target_dependencies(service_server ${dependencies})
 
 install(TARGETS
   publisher_node
   # publisher_class_node 
   subscriber_node 
   # executor_nodes
-  # service_server
-  # service_client
+  service_server
+  service_client
   # param_reader_user_info 
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib

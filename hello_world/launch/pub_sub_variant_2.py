@@ -10,7 +10,7 @@ def generate_launch_description():
     
     pub_cmd = Node(
         package='hello_world',
-        executable='publisher_node',
+        executable='publisher_class_node',
         output='screen'
     )
     

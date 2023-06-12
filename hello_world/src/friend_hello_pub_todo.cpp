@@ -14,6 +14,7 @@ int main(int argc, char** argv){
     friend_msgs::msg::FriendInfo msg;
     msg.name = "r2d2";
     msg.id = 456;
+
     publisher->publish(msg);
     rclcpp::spin_some(node);
     loop_rate.sleep();
