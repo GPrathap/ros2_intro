@@ -24,8 +24,8 @@ ament_target_dependencies(subscriber_node ${dependencies})
 # add_executable(executor_nodes src/executor_nodes_todo.cpp)
 # ament_target_dependencies(executor_nodes ${dependencies})
 
-# add_executable(param_reader_user_info src/set_name_and_id_todo.cpp)
-# ament_target_dependencies(param_reader_user_info ${dependencies})
+add_executable(param_reader_user_info src/set_name_and_id_todo.cpp)
+ament_target_dependencies(param_reader_user_info ${dependencies})
 
 add_executable(service_client src/friend_service_client.cpp)
 ament_target_dependencies(service_client ${dependencies})
@@ -39,8 +39,8 @@ install(TARGETS
   subscriber_node 
   # executor_nodes
   service_server
-  service_client
-  # param_reader_user_info 
+  # service_client
+  param_reader_user_info 
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION lib/${PROJECT_NAME}
