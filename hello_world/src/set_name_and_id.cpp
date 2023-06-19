@@ -12,8 +12,8 @@ public:
     declare_parameter("user_name", "r2d2");
 
     param_subscriber_ = std::make_shared<rclcpp::ParameterEventHandler>(this);
-    auto callback_linear_x = [this](const rclcpp::Parameter &p) {
-      RCLCPP_INFO(this->get_logger(), "callback_linear_x: Received an update to parameter \"%s\" "
+    auto callback_user_name = [this](const rclcpp::Parameter &p) {
+      RCLCPP_INFO(this->get_logger(), "callback_user_name: Received an update to parameter \"%s\" "
                   "of type %s: \"%s\"", p.get_name().c_str(), p.get_type_name().c_str(), p); 
       user_name_ = p;
     };

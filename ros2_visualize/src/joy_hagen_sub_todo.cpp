@@ -29,8 +29,10 @@ class HagenSub : public rclcpp::Node{
 
     bool callbackSpeed(std::shared_ptr<friend_msgs::srv::SetSpeed::Request> req, std::shared_ptr<friend_msgs::srv::SetSpeed::Response> res){
       RCLCPP_INFO_STREAM(get_logger(), "Speed service request: desired speed = " << req->desired_speed);
-      // TODO set res.new_speed 0.6 times desired_speed 
+      // TODO set res.new_speed 0.6 times desired_speed
+      res->new_speed = 0.6*req->desired_speed;
       // TODO set previous_speed as res.new_speed
+      previous_speed = res->new_speed;
       return true;
     }
 

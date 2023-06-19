@@ -24,17 +24,28 @@ class HagenPub : public rclcpp::Node{
     void sendMessages(){
       // TODO define message types of std_msgs::msg::Int32, geometry_msgs::msg::Vector3 and 
       //  friend_msgs::srv::SetSpeed
-     
+
+      std_msgs::msg::Int32 temp;
+      geometry_msgs::msg::Vector3 imu_data;
+      friend_msgs::srv::SetSpeed speed;
       int i = 0;
       rclcpp::Rate rate(200ms);
       while( rclcpp::ok() ) {
         // TODO set temperature value, i.e., you can define it as you wish
+        temp.data = 456.0;
         // TODO set acceleration values: x, y, and z
+        imu_data.x = 0.6*i;
+        imu_data.y = 0.34*i;
+        imu_data.z = 0.45*i;
         // TODO set desired speed 
+        // speed.desired_speed = 1.2;
         // TODO publish msg_temperature and msg_imu_acceleration 
+        temp_pub_->publish(temp);
+        acc_pub_->publish(imu_data);
+        
         // TODO call the service srv_speed and if it get executed, print previous_speed and new_speed
         auto request = std::make_shared<friend_msgs::srv::SetSpeed::Request>();
-        request->desired_speed = 0.45*i;
+        request->desired_speed = 0.56;
         auto future = client_get_speed_->async_send_request(request);
         RCLCPP_INFO(get_logger(), "Trying to call the /speed service for setting speed");
         // TODO ? is there something wrong here if so fix it 
