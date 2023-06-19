@@ -13,6 +13,9 @@ def generate_launch_description():
             'friends_names': ['r2d23', 'rdse4'],
             'friends_ids': [345, 6789]
         }],
+        remappings=[
+            ('/robot1/pose', '/turtle1/pose'),
+        ],
         output='screen'
     )
 

@@ -10,6 +10,15 @@ public:
   : Node("set_user_info_node")
   {
     declare_parameter("user_name", "r2d2");
+
+    param_subscriber_ = std::make_shared<rclcpp::ParameterEventHandler>(this);
+    auto callback_linear_x = [this](const rclcpp::Parameter &p) {
+      RCLCPP_INFO(this->get_logger(), "callback_linear_x: Received an update to parameter \"%s\" "
+                  "of type %s: \"%s\"", p.get_name().c_str(), p.get_type_name().c_str(), p); 
+      user_name_ = p;
+    };
+    cb_handle_ = param_subscriber_->add_parameter_callback("user_name", user_name_);
+
     declare_parameter("user_id", 345);
     declare_parameter("friends_names", std::vector<std::string>());
     declare_parameter("friends_ids", std::vector<int64_t>({}));
@@ -38,6 +47,9 @@ private:
   int user_id_;
   std::vector<std::string> frineds_names_;
   std::vector<int64_t>  frineds_ids_;
+  std::shared_ptr<rclcpp::ParameterEventHandler> param_subscriber_;
+  std::shared_ptr<rclcpp::ParameterCallbackHandle> cb_handle_; 
+
 };
 
 int main(int argc, char * argv[])
