@@ -23,12 +23,17 @@ def generate_launch_description():
             arguments=['-d' + os.path.join(get_package_share_directory('ros2_visualize'), 'config', 'rviz_config.rviz')]
     ) 
     
-    static_trans = Node(package = "tf2_ros", executable = "static_transform_publisher",
-                       arguments =  ["0", "0", "2.5", "0", "0", "0", "map", "odom"])
+    static_trans1 = Node(package = "tf2_ros", executable = "static_transform_publisher",
+                       arguments =  ["0", "0", "2.5", "0", "0", "0", "pc_frame", "marker_frame"])
+    
+    static_trans2 = Node(package = "tf2_ros", executable = "static_transform_publisher",
+                       arguments =  ["0", "0", "2.5", "0", "0", "0", "pc_frame", "odom"])
+
 
     ld = LaunchDescription()
     ld.add_action(joy_hagen_point_cloud)
     ld.add_action(rviz)
-    ld.add_action(static_trans)
+    ld.add_action(static_trans1)
+    ld.add_action(static_trans2)
 
     return ld

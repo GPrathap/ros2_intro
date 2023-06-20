@@ -51,11 +51,11 @@ ament_target_dependencies(joy_hagen_sub ${dependencies})
 add_executable(joy_hagen_pub src/joy_hagen_pub_todo.cpp)
 ament_target_dependencies(joy_hagen_pub ${dependencies})
 
-add_executable(joy_hagen_point_cloud src/joy_hagen_point_cloud_todo.cpp)
+add_executable(joy_hagen_point_cloud src/joy_hagen_point_cloud.cpp)
 ament_target_dependencies(joy_hagen_point_cloud ${dependencies} )
 target_link_libraries(joy_hagen_point_cloud ${PCL_LIBRARIES} ${Boost_SYSTEM_LIBRARY})
 
-add_executable(joy_hagen_marker_array src/joy_hagen_marker_array_todo.cpp)
+add_executable(joy_hagen_marker_array src/joy_hagen_marker_array.cpp)
 ament_target_dependencies(joy_hagen_marker_array ${dependencies} )
 target_link_libraries(joy_hagen_marker_array ${PCL_LIBRARIES} ${Boost_SYSTEM_LIBRARY})
 

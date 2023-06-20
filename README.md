@@ -5,9 +5,9 @@
     - ROS2 Fundamentals [:books: lec01 ](lectures/ros2_fundamentals.pdf) [:books: lec02 ](lectures/ros2_fundamentals_2.pdf) [:scroll: code](hello_world/src/)
     - Workout Examples  [:books:](lectures/recap.pdf) [:scroll: code]()
 - Section 2 :alien:	
-    - ROS2 Visualization  [:books:](lectures/) [:scroll: code]()
-    - ROS2 Debugging [:books:]() [:scroll: code]()	
-    - ROS2 Basic Control :books:	
+    - ROS2 Visualization  [:books:](lectures/ros2_visualization.pdf) [:scroll: code](ros2_visualize/)
+    - ROS2 Debugging [:books:]() [:scroll: code](ros2_debug_logging/)	
+    - ROS2 Basic Control [:scroll: code](ros2_visualize/)	
     - ROS2 Simulation (Gazebo+SDF) [:books:](lectures/) [:scroll: code]()	
 - Section 3 :alien:	
     - Mini Group Project 
