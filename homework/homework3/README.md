@@ -29,6 +29,6 @@ You need to submit a single zip file that contains the ros package with the sdf 
 
 ## Grading
 
-* This homework costs 10 points
+* This homework costs 15 points
 
 
