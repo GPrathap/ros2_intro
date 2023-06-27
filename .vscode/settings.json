@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "/home/op/catkin_ws/src/intro_ros2/friend_msgs"
+    "cmake.sourceDirectory": "/home/op/catkin_ws/src/intro_ros2/friend_msgs",
+    "DockerRun.DisableDockerrc": true
 }

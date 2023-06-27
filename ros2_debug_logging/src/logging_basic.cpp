@@ -52,6 +52,7 @@ class LoggingIntro : public rclcpp::Node{
       // RCLCPP_FATAL(get_logger(), "this is ros fatal error");
       // RCLCPP_WARN(get_logger(), "this is ros warning");
       RCLCPP_INFO_STREAM( get_logger(), "this is ros info value " << val);
+      
       // for(int i=0; i<5; i++){
       //   RCLCPP_WARN_STREAM_ONCE( get_logger(), " only print onces " << i);
       //   RCLCPP_WARN_STREAM_SKIPFIRST( get_logger(), "skip first time and then print " << i);

@@ -34,7 +34,7 @@ int main(int argc, char **argv)
   rclcpp::Rate loop_rate(500ms);
   while(rclcpp::ok()){
     if(flag && flag2)
-      std::cout << "You finished, congrats on 5 points\n";
+      std::cout << "You finished, congrats on 10 points\n";
     rclcpp::spin_some(node);
     loop_rate.sleep();
   }  

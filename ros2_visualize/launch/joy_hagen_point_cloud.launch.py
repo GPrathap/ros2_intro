@@ -10,7 +10,7 @@ def generate_launch_description():
     joy_hagen_point_cloud = Node(
         package='ros2_visualize',
         executable='joy_hagen_point_cloud',
-        # prefix=['valgrind --tool=callgrind --dump-instr=yes -v --instr-atstart=no'],
+        prefix=['valgrind --tool=callgrind --dump-instr=yes -v --instr-atstart=no'],
         # prefix=['xterm -e gdb -ex run --args'],
         output='screen' 
     )

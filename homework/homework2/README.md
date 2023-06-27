@@ -30,7 +30,7 @@ ros2 service call /turnon "flag:
   data: True"
 ```
   
-Then, it should print "You finished, congrats on 5 points"
+Then, it should print "You finished, congrats on 10 points"
 
 ## Submission
 
@@ -41,6 +41,6 @@ You need to submit a single zip file that contains the following:
 
 ## Grading
 
-* This homework costs 5 points
+* This homework costs 10 points
 
 

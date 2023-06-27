@@ -7,6 +7,7 @@ def generate_launch_description():
     param_reader_cmd = Node(
         package='hello_world',
         executable='param_reader_user_info',
+        
         parameters=[{
             'user_name': 'r2d2',
             'user_id' : 345,
