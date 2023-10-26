@@ -11,7 +11,9 @@
     - ROS2 Simulation (Gazebo+SDF) [:books:](lectures/ros2_gazebo_sdf.pdf) [:scroll: code](hagen_robot/hagen_robot_diff_drive/hagen_robot_diff_drive/)	
     - ROS2 Control robot [:scroll: code](hagen_robot/hagen_robot_controller/)	
 - Section 3 :alien:	
-    - Mini Group Project 
+    - Mini Group Project
+- Section 4 👽
+    - ROS2 Navigation [:books:](lectures/ros2_nav2.pdf)
 - References
     - https://docs.ros.org/en/humble/index.html
 
