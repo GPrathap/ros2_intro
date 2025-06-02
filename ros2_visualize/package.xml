@@ -19,6 +19,7 @@
   <depend>image_transport</depend>
   <depend>libpcl-all-dev</depend>
   <depend>pcl_conversions</depend>
+  <depend>friend_msgs</depend>
   <depend>interactive_markers</depend>
   <depend>tf2</depend>
   <depend>tf2_ros</depend>
