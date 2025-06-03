@@ -18,6 +18,11 @@ class ReceiverNode : public rclcpp::Node{
 void ReceiverNode::callback(const friend_msgs::msg::FriendInfo::SharedPtr msg)
 {
   RCLCPP_INFO(get_logger(), "Hello %d", msg->id);
+  std::vector<int32_t> items = msg->food_items;
+  for(auto food_item: items){
+    std::cout<<  food_item << ",";
+  }
+  std::cout<< std::endl;
 }
 
 int main(int argc, char **argv)

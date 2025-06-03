@@ -11,7 +11,8 @@ public:
   SetUserInfo()
   : Node("set_user_info_node")
   {
-    
+    declare_parameter("user_name", "r2d2");
+    declare_parameter("user_id", 345);
     // TODO declare parameter for friends_names(vector of string) and friends_ids (you need to decide the type and why)
     
     // TODO get the friends_names and friends_ids parameters 
@@ -30,7 +31,7 @@ private:
   std::string user_name_;
   int user_id_;
   std::vector<std::string> frineds_names_;
-  std::vector<int64_t>  frineds_ids_;
+  std::vector<int64_t> frineds_ids_;
 };
 
 int main(int argc, char * argv[])
