@@ -1,24 +1,26 @@
 #include <rclcpp/rclcpp.hpp>
 #include <friend_msgs/msg/friend_info.hpp>
 
+// https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html
+
 using namespace std::chrono_literals;
+ // TODO create timer that publish FriendInfo msg 10 times per second 
+class SenderNode : public rclcpp::Node{
+  public:
+    SenderNode() : Node("SenderNode"){
+      
+    }
+  private:
+
+};
 
 int main(int argc, char** argv){
   rclcpp::init(argc, argv);
-  auto node = rclcpp::Node::make_shared("publisher_node");
+
+  auto node = std::make_shared<SenderNode>();
   
-  auto publisher = node->create_publisher<friend_msgs::msg::FriendInfo>("/r2d2_pose", 10);
+  rclcpp::spin(node);
 
-  rclcpp::Rate loop_rate(500ms);
-  while(rclcpp::ok()){
-    friend_msgs::msg::FriendInfo msg;
-    msg.name = "r2d2";
-    msg.id = 456;
-
-    publisher->publish(msg);
-    rclcpp::spin_some(node);
-    loop_rate.sleep();
-  } 
   rclcpp::shutdown();
   return 0;
 }

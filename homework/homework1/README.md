@@ -6,7 +6,7 @@ You can ask us any questions any time, in the group or directly.
 
 ## Deadline
 
-**24.06.2023, 11:59pm**
+**TODO, 11:59pm**
 
 
 ## Description
