@@ -22,6 +22,12 @@ int main(int argc, char **argv)
   // (std::shared_ptr<friend_msgs::srv::FriendInfoService::Response>).
   // Inside the callback, print the request value and assign the response value, i.e., heartbeat, as the request value 
   
+
+  rclcpp::Service<friend_msgs::srv::FriendInfoService>::SharedPtr service =
+    node->create_service<friend_msgs::srv::FriendInfoService>("~/set_heartbeat", &add);
+
+  RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Service service is ready /set_heartbeat");
+
   rclcpp::spin(node);
   rclcpp::shutdown();
 

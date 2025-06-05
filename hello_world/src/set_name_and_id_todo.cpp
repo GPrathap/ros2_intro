@@ -13,8 +13,13 @@ public:
   {
     declare_parameter("user_name", "r2d2");
     declare_parameter("user_id", 345);
+    declare_parameter("friends_names", std::vector<std::string>());
+    declare_parameter("friends_ids", std::vector<int64_t>());
     // TODO declare parameter for friends_names(vector of string) and friends_ids (you need to decide the type and why)
-    
+    get_parameter("user_id", user_id_);
+    get_parameter("user_name", user_name_);
+    get_parameter("friends_names", frineds_names_);
+    get_parameter("friends_ids", frineds_ids_);
     // TODO get the friends_names and friends_ids parameters 
 
     if (frineds_names_.size() != frineds_ids_.size()) {

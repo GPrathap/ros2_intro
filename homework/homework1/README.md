@@ -6,7 +6,7 @@ You can ask us any questions any time, in the group or directly.
 
 ## Deadline
 
-**TODO, 11:59pm**
+**19th June 2025, 11:59pm**
 
 
 ## Description

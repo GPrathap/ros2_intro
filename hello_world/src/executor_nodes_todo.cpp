@@ -41,7 +41,11 @@ int main(int argc, char * argv[])
 
   // Create a rclcpp::executors::SingleThreadedExecutor and add those created nodes 
   // Check the difference between SingleThreadedExecutor and MultiThreadedExecutor
-  
+  rclcpp::executors::SingleThreadedExecutor executor;
+  executor.add_node(node_pub);
+  executor.add_node(node_sub);
+  executor.spin();
+
   rclcpp::shutdown();
   return 0;
 }

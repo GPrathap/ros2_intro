@@ -6,7 +6,7 @@ using std::placeholders::_1;
 class ReceiverNode : public rclcpp::Node{
   public:
     ReceiverNode() : Node("receiver_node"){
-      subscriber_ = create_subscription<friend_msgs::msg::FriendInfo>("/r2d2_pose", 10
+      subscriber_ = create_subscription<friend_msgs::msg::FriendInfo>("/r2d2_pose", 1
       ,std::bind(&ReceiverNode::callback, this, _1));
     }
     void callback(const friend_msgs::msg::FriendInfo::SharedPtr msg);
