@@ -68,26 +68,26 @@ target_link_libraries(manual_composition
   hello_world_service_client)
 ament_target_dependencies(manual_composition "rclcpp")
 
-# add_library(${PROJECT_NAME} SHARED
-#   src/pointcloud_publisher.cpp
-#   src/pointcloud_subscriber.cpp
-# )
-# target_include_directories(${PROJECT_NAME} PRIVATE
-#   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-#   $<INSTALL_INTERFACE:include>
-# )
-# ament_target_dependencies(${PROJECT_NAME} ${dependencies})
-# rclcpp_components_register_nodes(${PROJECT_NAME}
-#   "PointCloudPublisher"
-#   "PointCloudSubscriber"
-# )
-# # Install targets
-# install(TARGETS
-#   ${PROJECT_NAME}
-#   ARCHIVE DESTINATION lib
-#   LIBRARY DESTINATION lib
-#   RUNTIME DESTINATION bin
-# )
+add_library(${PROJECT_NAME} SHARED
+  src/pointcloud_publisher.cpp
+  src/pointcloud_subscriber.cpp
+)
+target_include_directories(${PROJECT_NAME} PRIVATE
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>
+)
+ament_target_dependencies(${PROJECT_NAME} ${dependencies})
+rclcpp_components_register_nodes(${PROJECT_NAME}
+  "PointCloudPublisher"
+  "PointCloudSubscriber"
+)
+# Install targets
+install(TARGETS
+  ${PROJECT_NAME}
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+)
 
 # Install Python script (optional)
 install(PROGRAMS
