@@ -27,6 +27,49 @@ Imagine a mobile robot equipped with a manipulator arm and a camera mounted at i
 
 ---
 
+A diagram showing a **(illustrative)** transformation tree connecting the frames you've described: `world`, `base_link`, `arm_base`, `wrist`, and `camera`.
+
+```
+               world
+                 |
+         [T_world_base_link]
+                 |
+             base_link
+                 |
+        [T_base_link_arm_base]
+                 |
+             arm_base
+                 |
+        [T_arm_base_wrist]
+                 |
+               wrist
+                 |
+        [T_wrist_camera]
+                 |
+              camera
+```
+
+### Description of Each Frame:
+
+* **world**: The global/inertial reference frame.
+* **base\_link**: The mobile base of the robot (e.g., wheeled platform).
+* **arm\_base**: Where the manipulator is mounted on the robot's base.
+* **wrist**: The last link or flange of the manipulator arm (before the tool/camera).
+* **camera**: The frame for a camera rigidly mounted on the wrist.
+
+### Sample Transform Values:
+
+These are arbitrary just for visualization/testing purposes:
+
+| Parent → Child         | Translation (x, y, z) \[m] | Rotation (r, p, y) \[deg] |
+| ---------------------- | -------------------------- | ------------------------- |
+| world → base\_link     | (1.0, 2.0, 0.0)            | (0, 0, 90)                |
+| base\_link → arm\_base | (0.0, 0.0, 0.5)            | (0, 0, 0)                 |
+| arm\_base → wrist      | (0.5, 0.0, 0.5)            | (0, 45, 0)                |
+| wrist → camera         | (0.1, 0.0, 0.1)            | (0, 0, 0)                 |
+
+---
+
 ## 🔹📝 Tasks Breakdown
 
 ### 1️⃣ Define Static Transforms
