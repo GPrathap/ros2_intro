@@ -67,9 +67,9 @@ add_executable(joy_hagen_basic_control src/joy_hagen_basic_control_todo.cpp)
 ament_target_dependencies(joy_hagen_basic_control ${dependencies} )
 target_link_libraries(joy_hagen_basic_control  ${Boost_SYSTEM_LIBRARY})
 
-add_executable(joy_hagen_lab_task src/joy_hagen_lab_task.cpp)
-ament_target_dependencies(joy_hagen_lab_task ${dependencies} )
-target_link_libraries(joy_hagen_lab_task  ${Boost_SYSTEM_LIBRARY})
+# add_executable(joy_hagen_lab_task src/joy_hagen_lab_task.cpp)
+# ament_target_dependencies(joy_hagen_lab_task ${dependencies} )
+# target_link_libraries(joy_hagen_lab_task  ${Boost_SYSTEM_LIBRARY})
 
 
 
@@ -80,7 +80,7 @@ install(TARGETS
   joy_hagen_pub
   joy_hagen_camera
   joy_hagen_point_cloud 
-  joy_hagen_lab_task
+  # joy_hagen_lab_task
   ARCHIVE DESTINATION lib 
   LIBRARY DESTINATION lib 
   RUNTIME DESTINATION lib/${PROJECT_NAME}
