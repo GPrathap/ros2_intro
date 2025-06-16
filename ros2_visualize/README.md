@@ -4,9 +4,9 @@
 
 You're on Mars, and *Rover-X*, your exploration robot, is mapping unknown terrain. As the lead robotics engineer, your mission is to monitor its progress in real-time using ROS 2 and RViz2. You’ll start by visualizing simple status indicators, and gradually build up to full sensor visualizations — markers, trajectories, point clouds, IMU and odometry streams.
 
+![tryr2d2](https://github.com/user-attachments/assets/28fb353a-7e11-496f-bb28-c8d38bb955fb)
 
 ## 🔧 Setup
-
 * ROS 2 Humble
 * `rviz2`
 * `rclcpp`, `visualization_msgs`, `geometry_msgs`, 
