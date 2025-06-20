@@ -24,7 +24,7 @@ Your goal is to fix the errors and run ```clocon build  --packages-select buggy`
 Then, if you fixed the errors correctly, you should run ```ros2 launch buggy test.launch.py``` and run in another terminal
 
 ```
-ros2 service call /turnon "flag:            
+ros2 service call /turnon buggy/srv/CustomSrv "flag:            
   data: True"
 ```
   
