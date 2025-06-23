@@ -6,7 +6,12 @@
 #include "tf2_ros/static_transform_broadcaster.h"
 #include "geometry_msgs/msg/transform_stamped.hpp"
 #include <tf2/LinearMath/Quaternion.h>
-#include <tf2_geometry_msgs/tf2_geometry_msgs.h>  // For tf2::toMsg
+
+#if __has_include(<tf2_geometry_msgs/tf2_geometry_msgs.hpp>)
+  #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+#else
+  #include <tf2_geometry_msgs/tf2_geometry_msgs.h>
+#endif
 
 #include <chrono>
 using namespace std::chrono_literals;

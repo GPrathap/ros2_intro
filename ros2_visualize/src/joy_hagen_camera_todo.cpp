@@ -1,7 +1,12 @@
 
 #include <rclcpp/rclcpp.hpp>
 #include <image_transport/image_transport.hpp>
-#include <cv_bridge/cv_bridge.h>
+#include <cv_bridge/cv_bridge.hpp>
+#if __has_include(<cv_bridge/cv_bridge.hpp>)
+  #include <cv_bridge/cv_bridge.hpp>
+#else
+  #include <cv_bridge/cv_bridge.h>
+#endif
 #include <sensor_msgs/image_encodings.hpp>
 #include <opencv2/highgui/highgui.hpp>
 
