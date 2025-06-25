@@ -27,7 +27,15 @@ class PointCloudPublisher : public rclcpp::Node{
         pc.is_dense = false;
         pc.resize(pc.width*pc.height);
         // TODO resize the pc with its size 
-        // TODO assign the x, y, and z values of each point 
+        for( size_t i = 0; i < pc.height; ++i ) {
+          for( size_t j = 0; j < pc.width; ++j ) {
+            const size_t k = pc.width * i + j;
+            // TODO assign the x, y, and z values of each point
+              pc.points[k].x = 0.1 * (i+1);
+              pc.points[k].y = 0.2 * (j+1);
+              pc.points[k].z = 1.5;
+          }
+        }
     }
 
     void updateAndPublishPC(){
@@ -57,10 +65,11 @@ class PointCloudPublisher : public rclcpp::Node{
         odom.pose.pose.position.y = pose_y;
         odom.pose.pose.position.z = pose_z;
         sensor_msgs::msg::PointCloud2 msg_pc;
+        pcl::toROSMsg(pc, msg_pc);
         // TODO use pcl::toROSMsg to convert pcl message to ROS message 
-
-        // TODO set header frame id of msg_pc as the "pc_frame" and set the stamp as the current time 
-  
+        // TODO set header frame id of msg_pc as the "pc_frame"
+        msg_pc.header.frame_id = "pc_frame";
+        msg_pc.header.stamp = this->get_clock()->now();
         pc_pub->publish(msg_pc);
         odom_pub->publish(odom);
         rclcpp::spin_some(this->get_node_base_interface());

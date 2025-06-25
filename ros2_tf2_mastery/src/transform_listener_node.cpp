@@ -23,7 +23,7 @@ private:
     try
     {
       geometry_msgs::msg::TransformStamped base_to_camera = 
-        buffer_.lookupTransform("base_link", "camera", rclcpp::Time(0));
+        buffer_.lookupTransform("base_link", "arm_base", rclcpp::Time(0));
 
       RCLCPP_INFO(this->get_logger(), "Base->Camera: x: %f y: %f z: %f",
                    base_to_camera.transform.translation.x,

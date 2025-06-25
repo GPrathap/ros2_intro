@@ -8,8 +8,6 @@
 
 using namespace std::chrono_literals;
 
-// ref: http://wiki.ros.org/rviz/DisplayTypes/Marker
-
 class HagenPubMarkerArray : public rclcpp::Node{
   public:
     HagenPubMarkerArray(): Node("hagen_pub_marker_array"){
@@ -20,8 +18,11 @@ class HagenPubMarkerArray : public rclcpp::Node{
 
       visualization_msgs::msg::Marker msg_marker;
       // TODO set header frame id of msg_marker as the "marker_frame"
+      msg_marker.header.frame_id = "marker_frame";
       msg_marker.ns = "shapes";
       msg_marker.id = 0;
+      msg_marker.type = visualization_msgs::msg::Marker::CUBE;
+      msg_marker.action = visualization_msgs::msg::Marker::ADD;
       // TODO set msg_marker type and actions as  visualization_msgs::Marker::CUBE and visualization_msgs::Marker::ADD ,
       // respectively 
 
@@ -42,11 +43,12 @@ class HagenPubMarkerArray : public rclcpp::Node{
       msg_marker.color.b = 0.;
       msg_marker.color.a = 1.;
 
-      msg_marker.lifetime = rclcpp::Duration::from_seconds(0.0);
+      msg_marker.lifetime = rclcpp::Duration::from_seconds(3.0);
       RCLCPP_INFO(get_logger(), "Initial Marker Created");
       rclcpp::Rate rate(1s);
       while( rclcpp::ok() ) {
-        // TODO set msg_marker header time stamp
+        // Set msg_marker header time stamp as 
+        // msg_marker.header.stamp = 
         msg_marker.pose.position.x += 0.01;
         msg_marker.type = visualization_msgs::msg::Marker::SPHERE;
         msg_marker.pose.position.y += 0.02;
