@@ -2,6 +2,8 @@
 
 SDF (Simulation Description Format) is an XML-based format used to describe objects and environments in Gazebo. It is highly extensible and supports physical properties, visuals, sensors, and plugins.
 
+![model_v1](https://github.com/user-attachments/assets/c3be54ce-462d-47ae-8b63-3a1909a8f5b7)
+
 ---
 
 ### 🧰 0. `<model>` – The Robot Container
