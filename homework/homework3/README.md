@@ -3,7 +3,7 @@
 
 ## Deadline
 
-**TODO, 11:59pm**
+**5th of July, 11:59pm**
 
 
 ## Description
