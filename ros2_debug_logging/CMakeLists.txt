@@ -13,12 +13,18 @@ set(dependencies
     rclcpp
     rcutils
 )
+include_directories(include)
 
 add_executable(logging_basic src/logging_basic_todo.cpp)
 ament_target_dependencies(logging_basic ${dependencies})
 
+
+add_executable(astrobot_logger src/astrobot_node.cpp src/helpers.cpp)
+ament_target_dependencies(astrobot_logger ${dependencies})
+
 install(TARGETS
-  logging_basic
+  logging_basic 
+  astrobot_logger
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION lib/${PROJECT_NAME}
