@@ -7,9 +7,8 @@
 
 ## 🪐 **Story Introduction**
 
- You are a systems engineer** on the **Astrobot Control Team** for **LunaRover-7**, a robotic assistant deployed on the Moon’s south pole. The robot has started **misbehaving** — skipping tasks, missing cycles, and returning invalid sensor readings.
-
-You’ve been assigned to **instrument its ROS 2 software using advanced logging**, track down the bugs, and **get it back online safely** — before the next lunar eclipse cuts off power.
+ You are a systems engineer on the **Astrobot Control Team** for **LunaRover-7**, a robotic assistant deployed on the Moon’s south pole. The robot has started **misbehaving** — skipping tasks, missing cycles, and returning invalid sensor readings. You’ve been assigned to **instrument its ROS 2 software using advanced logging**, track down the bugs, and **get it back online safely** — before the next lunar eclipse cuts off power.
+ 
 ---
 
 ## 🎯 Mission Objectives
