@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="mobile_hagen_robot">  
+     <static>true</static>    
+       <link name='chassis'>
+         <pose>0 0 .04 0 0 0</pose>
+           <collision name='collision'>
+             <geometry>
+               <box>
+                 <size>.5 .3 .2</size>
+               </box>
+             </geometry>
+           </collision>
+           <visual name='visual'>
+             <pose> 0 0 0.02 0 0 0 </pose>
+             <geometry>
+               <box>
+                 <size>.4 .2 .1</size>
+               </box>
+             </geometry>
+           </visual>
+      </link>      
+  </model>
+</sdf>
