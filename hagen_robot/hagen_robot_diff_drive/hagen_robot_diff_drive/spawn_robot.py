@@ -13,7 +13,7 @@ def main():
     rclpy.init()
     sdf_file_path = os.path.join(
         get_package_share_directory("hagen_robot_diff_drive"), "models",
-        "hagen_robot_model", "hagen_robot_model.sdf")
+        "hagen_robot_model", "hagen_robot_model_v0.sdf")
     
     
     node = rclpy.create_node("entity_spawner")
